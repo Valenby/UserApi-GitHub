@@ -13,7 +13,7 @@ var requestOptions = {
  try {
     const result= await fetch(`https://api.github.com/users/${user}`, requestOptions)
     const jsonResponse = await result.json();
-    console.log(jsonResponse)
+    // console.log(jsonResponse)
     return jsonResponse;
     
     } catch (error) {

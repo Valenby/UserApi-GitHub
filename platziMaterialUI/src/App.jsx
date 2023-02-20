@@ -6,9 +6,9 @@ export const App = () => {
 
   return (
    <Container sx={{
-      background: '#FFE1E1',
+      background: '#7286D3',
       width: '80vw',
-      height: '500px',
+      height: '700px',
       borderRadius: '16px',
       marginTop: '50px',
       display: 'flex',

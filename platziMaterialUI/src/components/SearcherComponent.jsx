@@ -14,7 +14,12 @@ export const SearcherComponent = () => {
   avatar_url:'https://seeklogo.com/images/G/github-logo-9BBCA663A4-seeklogo.com.png',
   name: 'GitHub',
   created_at: '2008-4-10T17:09:48Z',
-  login: 'github'
+  login: 'github',
+  bio: 'No hay descripción ',
+  location: 'San Francisco',
+  blog: 'https://github.blog',
+  company: '@github',
+  twitter_username: 'Not Available'
  });
 
  const onSearchValueChange = (event)=>{
@@ -39,7 +44,7 @@ const handleInputChange = async()=>{
       direction='row'
       sx={{
         marginTop: '30px',
-        width: '80%',
+        width: '70%',
     }}>
 
 

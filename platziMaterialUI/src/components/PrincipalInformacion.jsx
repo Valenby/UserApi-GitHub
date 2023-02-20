@@ -1,5 +1,5 @@
-import { Typography } from "@mui/material"
-import { Stack } from "@mui/system"
+import { Grid, Typography } from "@mui/material"
+
 
 
 export const PrincipalInformacion = ({userData}) => {
@@ -9,12 +9,29 @@ export const PrincipalInformacion = ({userData}) => {
 
   return (
     <>
-    <Stack>
-        <Typography> {name} </Typography>
-        <Typography> {created_at} </Typography>
-    </Stack>
+    <Grid
+    container
+    spacing={3}
+    direction='row'
+    justifyContent='space-evenly'
+    alignItems='center'
+    >
+      
 
-    <Typography> {login} </Typography>
+    <Grid item  xs={8} lg={2}>
+        <Typography variant="h4" > <b> {name}</b> </Typography>
+        
+    </Grid>
+
+    <Grid item  xs={8} lg={4}>
+    <Typography variant="subtitle"> <b> {created_at}</b> </Typography>
+    </Grid>
+
+  
+    </Grid>
+
+    <Typography  variant="caption"> @{login} </Typography>
+    
     
     </>
   )
