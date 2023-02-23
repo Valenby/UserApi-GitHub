@@ -1,56 +1,33 @@
 import * as React from 'react';
-import {  BottomNavigation, BottomNavigationAction, Grid, Typography } from "@mui/material"
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import { Diversity3, DynamicFeed } from '@mui/icons-material';
+import {  Grid, Typography } from "@mui/material";
+
 
 
 
 export const PrincipalInformacion = ({userData}) => {
     
-  const [value, setValue] = React.useState(0);
-
-    const {name, login, created_at,bio, public_repos , followers, following } = userData;
-
+    const {name, login, created_at,bio } = userData;
 
   return (
     <>
-      <Grid 
-      container
-      direction='row'
-      justifyContent='space-between'
-      >
-        <Grid item >
-          <Typography> {name} </Typography>
-          <Typography> {created_at} </Typography>
+      <Grid>
+        <Grid item>
+          <Typography  textAlign='center' variant='h5'color='#03001C' > <b>{name}</b> </Typography>
+          <Typography mt={1} textAlign='center' > @{login}  </Typography>
         </Grid>
-       
 
-      <Typography> {login} </Typography>
-      <Typography> {bio} </Typography>
+        <Typography mt={1} textAlign='center' variant='body1' >  @{created_at} </Typography>
 
-    <Grid item>
-      
     </Grid>
 
-    <Grid item >
-      <Typography> repos</Typography>
-      <Typography> followers</Typography>
-      <Typography> following</Typography>
-      <BottomNavigation
-        showLabels
-        value={value}
-        onChange={(event, newValue)=>{
-          setValue(newValue);
-        }}
-      >
-
-        <BottomNavigationAction  label={ public_repos} icon={<FavoriteIcon/>} /> 
-        <BottomNavigationAction label={ followers} icon={<FavoriteIcon  />}/>
-        <BottomNavigationAction label={ following} icon={<FavoriteIcon  />}/>
-        
-      </BottomNavigation>
-    </Grid>
-    </Grid>
+  <Grid>
+        {
+          bio !== null
+          ?<Typography variant="body1" textAlign='center' > {bio}</Typography>
+          :<Typography variant="body1" textAlign='center' > No hay descripción </Typography>
+        }
+  </Grid>
+   
    
 
     </>

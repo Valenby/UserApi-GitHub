@@ -5,16 +5,18 @@ import { SearcherComponent } from "./components";
 export const App = () => {
 
   return (
-   <Container sx={{
-      background: '#FFE1E1',
-      width: '80vw',
-      height: '500px',
-      borderRadius: '16px',
-      marginTop: '50px',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center'
-   }} >
+   <Container 
+   sx={{ 
+    background: '#EAC7C7',
+    border: '1px solid #ccc',
+    height: '400%',
+    width: '100%',
+    borderRadius: '16px',
+    
+  }}
+   >
+
+
     <SearcherComponent />
    </Container>
   )
