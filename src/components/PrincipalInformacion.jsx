@@ -1,16 +1,13 @@
 import * as React from 'react';
 import {  Grid, Typography } from "@mui/material";
 
-
-
-
 export const PrincipalInformacion = ({userData}) => {
     
     const {name, login, created_at,bio } = userData;
 
   return (
     <>
-      <Grid>
+      <Grid >
         <Grid item>
           <Typography  textAlign='center' variant='h5'color='#03001C' > <b>{name}</b> </Typography>
           <Typography mt={1} textAlign='center' > @{login}  </Typography>
@@ -20,7 +17,7 @@ export const PrincipalInformacion = ({userData}) => {
 
     </Grid>
 
-  <Grid>
+  <Grid >
         {
           bio !== null
           ?<Typography variant="body1" textAlign='center' > {bio}</Typography>
