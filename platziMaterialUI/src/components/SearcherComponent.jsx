@@ -5,10 +5,10 @@ import { useState } from "react";
 import { ApiGitHub } from "../helpers";
 import { VIstaUser } from "./VIstaUser";
 
-export const SearcherComponent = () => {
-
+export const SearcherComponent = ({initialData}) => {
+  console.log(initialData, "searchercomponent")
   const [valueInput, setValueInput] = useState('');
-  const [data, setData] = useState('octocat');
+  const [data, setData] = useState(initialData);
   // {
   //   avatar_url:'https://seeklogo.com/images/G/github-logo-9BBCA663A4-seeklogo.com.png',
   //   name: 'GitHub',
@@ -25,7 +25,6 @@ export const SearcherComponent = () => {
     // petionApijson
     const userData = await ApiGitHub(valueInput);
     setData(userData);
-    console.log(data)
   }
 
    

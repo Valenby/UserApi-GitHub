@@ -1,9 +1,12 @@
 import { Container } from "@mui/system";
 import { SearcherComponent } from "./components";
 
+// let octocatData = async () => {
+//   return octocatData = await ApiGitHub("octocat");
+// }
 
-export const App = () => {
-
+export const App = ({initialData}) => {
+  
   return (
    <Container 
    sx={{ 
@@ -17,7 +20,7 @@ export const App = () => {
    >
 
 
-    <SearcherComponent />
+    <SearcherComponent initialData = {initialData} />
    </Container>
   )
 }
