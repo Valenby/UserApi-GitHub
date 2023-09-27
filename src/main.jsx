@@ -10,7 +10,6 @@ const octocatData =  {
     login: 'github'
   }
 
-
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
         <App initialData = {octocatData}/>

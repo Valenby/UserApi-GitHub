@@ -1,10 +1,6 @@
 import { Container } from "@mui/system";
 import { SearcherComponent } from "./components";
 
-// let octocatData = async () => {
-//   return octocatData = await ApiGitHub("octocat");
-// }
-
 export const App = ({initialData}) => {
   
   return (

@@ -1,14 +1,10 @@
-
-
 export const ApiGitHub = async(user) => {
 
-
-  var requestOptions = {
+  let requestOptions = {
       method: 'GET',
       redirect: 'follow'
     };
     
-  
    try {
       const result= await fetch(`https://api.github.com/users/${user}`, requestOptions)
       const jsonResponse = await result.json();
